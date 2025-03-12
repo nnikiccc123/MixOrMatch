@@ -11,4 +11,4 @@
 - CSS
 - JavaScript
 
-Ovaj projekat je moj prvi susret sa razvojem web igara i koristila sam ga kao priliku da unapredim svoje veštine u HTML-u, CSS-u i JavaScript-u.
+Ovaj projekat je moj prvi susret sa razvojem web igara i koristila sam ga kao priliku da unapredim svoje veštine u HTML-u, CSS-u i JavaScript-u. Rađen je 2024. godine
