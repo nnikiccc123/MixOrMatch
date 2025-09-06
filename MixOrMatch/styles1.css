@@ -1,13 +1,13 @@
 @font-face {
-    font-family: "Creepy";
-    src: url("Assets/Fonts/American\ Typewriter\ Regular.ttf") format("woff"),
-         url("Assets/Fonts/American\ Typewriter\ Regular.ttf") format("woff2");
+  font-family: "Creepy";
+  src: url("Assets/Fonts/American\ Typewriter\ Regular.ttf") format("woff"),
+    url("Assets/Fonts/American\ Typewriter\ Regular.ttf") format("woff2");
 }
 
 @font-face {
-    font-family: "Lunacy";
-    src: url("Assets/Fonts/American\ Typewriter\ Regular.ttf") format("woff"),
-         url("Assets/Fonts/American\ Typewriter\ Regular.ttf") format("woff2");
+  font-family: "Lunacy";
+  src: url("Assets/Fonts/American\ Typewriter\ Regular.ttf") format("woff"),
+    url("Assets/Fonts/American\ Typewriter\ Regular.ttf") format("woff2");
 }
 
 * {
@@ -22,7 +22,7 @@ html {
 
 body {
   margin: 0;
-  background-image: url('Assets/Images1/5804273.jpg');
+  background-image: url("Assets/Images1/5804273.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,13 +34,13 @@ body {
   left: 20px;
   width: 50px;
   height: 50px;
-  background-color: #ff9900; 
+  background-color: #ff9900;
   border-radius: 50%;
-  transform: rotate(45deg); 
+  transform: rotate(45deg);
 }
 
 .back-button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -102,11 +102,11 @@ body {
 }
 
 .card.visible .card-back {
-  transform: rotateY(-180deg); 
+  transform: rotateY(-180deg);
 }
 
 .card.visible .card-front {
-  transform: rotateY(0); 
+  transform: rotateY(0);
 }
 
 .card.matched .card-front .card-value {
@@ -116,21 +116,19 @@ body {
 .card-back {
   background-color: #ed953d;
   border-color: #f77d03;
-  transform: rotateY(0); 
+  transform: rotateY(0);
 }
-
 
 .card-face:hover .cob-web {
   width: 52px;
   height: 52px;
 }
 
-
 .door {
   position: relative;
   max-width: 100%;
   max-height: 100%;
-  transform: translate(1.5px,2px);
+  transform: translate(1.5px, 2px);
 }
 
 .card-back:hover .door {
@@ -142,7 +140,7 @@ body {
   max-width: 100%;
   max-height: 100%;
   transition: transform 100ms ease-in-out;
-  transform: scale(.9);
+  transform: scale(0.9);
 }
 
 .card-front:hover .card-value {
@@ -150,7 +148,7 @@ body {
 }
 
 .card-front {
-  background-color:  rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   border-color: #333;
   transform: rotateY(180deg);
 }
@@ -172,7 +170,7 @@ body {
 }
 
 .overlay-text-small {
-  font-size: .3em;
+  font-size: 0.3em;
 }
 
 .overlay-text.visible {
@@ -181,14 +179,15 @@ body {
 }
 
 @keyframes dance {
-  0%, 100% {
-    transform: rotate(0)
+  0%,
+  100% {
+    transform: rotate(0);
   }
   25% {
-    transform: rotate(-30deg)
+    transform: rotate(-30deg);
   }
   75% {
-    transform: rotate(30deg)
+    transform: rotate(30deg);
   }
 }
 
@@ -198,14 +197,14 @@ body {
     font-size: 0;
   }
   to {
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, 0.8);
     font-size: 10em;
   }
 }
 
 @media (max-width: 600px) {
   .game-container {
-    grid-template-columns: repeat(2, auto)
+    grid-template-columns: repeat(2, auto);
   }
 
   .game-info-container {

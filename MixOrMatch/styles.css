@@ -1,13 +1,13 @@
 @font-face {
-    font-family: "Creepy";
-    src: url("Assets/Fonts/GABRWFFR.TTF") format("woff"),
-         url("Assets/Fonts/GABRWFFR.TTF") format("woff2");
+  font-family: "Creepy";
+  src: url("Assets/Fonts/GABRWFFR.TTF") format("woff"),
+    url("Assets/Fonts/GABRWFFR.TTF") format("woff2");
 }
 
 @font-face {
-    font-family: "Lunacy";
-    src: url("Assets/Fonts/GABRWFFR.TTF") format("woff"),
-         url("Assets/Fonts/GABRWFFR.TTF") format("woff2");
+  font-family: "Lunacy";
+  src: url("Assets/Fonts/GABRWFFR.TTF") format("woff"),
+    url("Assets/Fonts/GABRWFFR.TTF") format("woff2");
 }
 
 * {
@@ -22,7 +22,7 @@ html {
 
 body {
   margin: 0;
-  background-image: url('Assets/Images/5660676.jpg');
+  background-image: url("Assets/Images/5660676.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,13 +34,13 @@ body {
   left: 20px;
   width: 50px;
   height: 50px;
-  background-color: #8229af; 
+  background-color: #8229af;
   border-radius: 50%;
-  transform: rotate(45deg); 
+  transform: rotate(45deg);
 }
 
 .back-button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -102,11 +102,11 @@ body {
 }
 
 .card.visible .card-back {
-  transform: rotateY(-180deg); 
+  transform: rotateY(-180deg);
 }
 
 .card.visible .card-front {
-  transform: rotateY(0); 
+  transform: rotateY(0);
 }
 
 .card.matched .card-front .card-value {
@@ -116,22 +116,19 @@ body {
 .card-back {
   background-color: #8229af;
   border-color: #8229af;
-  transform: rotateY(0); 
+  transform: rotateY(0);
 }
-
-
 
 .card-face:hover .cob-web {
   width: 52px;
   height: 52px;
 }
 
-
 .door {
   position: relative;
   max-width: 100%;
   max-height: 100%;
-  transform: translate(1.5px,2px);
+  transform: translate(1.5px, 2px);
 }
 
 .card-back:hover .door {
@@ -143,7 +140,7 @@ body {
   max-width: 100%;
   max-height: 100%;
   transition: transform 100ms ease-in-out;
-  transform: scale(.9);
+  transform: scale(0.9);
 }
 
 .card-front:hover .card-value {
@@ -151,7 +148,7 @@ body {
 }
 
 .card-front {
-  background-color:  rgb(247, 245, 245);
+  background-color: rgb(247, 245, 245);
   border-color: #333;
   transform: rotateY(180deg);
 }
@@ -169,11 +166,12 @@ body {
   flex-direction: column;
   color: #8229af;
   font-family: Creepy, serif;
-  transition: background-color 500ms, font-size 500ms;
+  transition: background-color 500ms, transform 500ms;
+  font-size: 10em; /* desktop default */
 }
 
 .overlay-text-small {
-  font-size: .3em;
+  font-size: 0.3em;
 }
 
 .overlay-text.visible {
@@ -182,14 +180,15 @@ body {
 }
 
 @keyframes dance {
-  0%, 100% {
-    transform: rotate(0)
+  0%,
+  100% {
+    transform: rotate(0);
   }
   25% {
-    transform: rotate(-30deg)
+    transform: rotate(-30deg);
   }
   75% {
-    transform: rotate(30deg)
+    transform: rotate(30deg);
   }
 }
 
@@ -199,19 +198,68 @@ body {
     font-size: 0;
   }
   to {
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, 0.8);
     font-size: 10em;
   }
 }
 
-@media (max-width: 600px) {
+/* Mobile stilovi */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 3em;
+  }
+
   .game-container {
-    grid-template-columns: repeat(2, auto)
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 6px;
+    margin: 20px auto;
+  }
+
+  .card {
+    width: 90px;
+    height: 120px;
+  }
+
+  .card-face {
+    border-radius: 8px;
+  }
+
+  .card .card-value {
+    transform: scale(0.8);
   }
 
   .game-info-container {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 15px;
   }
- 
+
+  .game-info {
+    font-size: 1.2em;
+  }
+  .overlay-text {
+    font-size: 5em; /* smanji overlay tekst */
+    text-align: center;
+  }
+
+  .overlay-text-small {
+    font-size: 0.2em; /* mali tekst manji */
+    text-align: center;
+  }
+  .overlay-text.visible {
+    font-size: 5em;
+    text-align: center;
+  }
+
+  /* promeni keyframes za mobilni */
+  @keyframes overlay-grow {
+    from {
+      background-color: rgba(0, 0, 0, 0);
+      font-size: 0;
+    }
+    to {
+      background-color: rgba(0, 0, 0, 0.8);
+      font-size: 5em; /* isto kao overlay-text za mobilni */
+    }
+  }
 }
