@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="main.css" rel="stylesheet" />
+
+    <style>
+      @font-face {
+        font-family: "Creepy";
+        src: url("Assets/Fonts/GABRWFFR.TTF") format("truetype");
+      }
+
+      @font-face {
+        font-family: "Lunacy";
+        src: url("Assets/Fonts/American\ Typewriter\ Regular.ttf")
+          format("truetype");
+      }
+
+      @font-face {
+        font-family: "Steepodoni";
+        src: url("Assets/Fonts/SteepodoniRoman.ttf") format("truetype");
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-image: url("Assets/Images/high-angle-memory-concept-with-puzzle-pieces.jpg");
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      h1 {
+        font-size: 8rem;
+        margin-bottom: 1rem;
+        color: #df2c2c;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #fff;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .b1 {
+        font-family: "Creepy", sans-serif;
+        padding: 0.5rem 1rem;
+        font-size: 3rem;
+        background-color: #9b00accd;
+        color: #fffb00;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin: 1rem;
+        width: 250px;
+        height: 100px;
+      }
+
+      .b2 {
+        font-family: "Lunacy", sans-serif;
+        padding: 0.5rem 1rem;
+        font-size: 2rem;
+        background-color: #ff9900;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin: 1rem;
+        width: 250px;
+        height: 100px;
+      }
+
+      .b3 {
+        font-family: "Steepodoni", sans-serif;
+        padding: 0.5rem 1rem;
+        font-size: 2rem;
+        background-color: #007bff;
+        color: #ffd500;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin: 1rem;
+        width: 250px;
+        height: 100px;
+      }
+
+      .b1:hover {
+        background-color: #4f0584;
+        transform: scale(1.1);
+      }
+
+      .b2:hover {
+        background-color: #ff5500;
+        transform: scale(1.1);
+      }
+
+      .b3:hover {
+        background-color: #0042b5;
+        transform: scale(1.1);
+      }
+
+      @media (max-width: 600px) {
+        body {
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: top center;
+        }
+
+        .button-container {
+          flex-direction: column;
+        }
+
+        h1 {
+          font-size: 3rem;
+          text-align: center;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+          text-align: center;
+        }
+
+        .b1,
+        .b2,
+        .b3 {
+          width: 200px;
+          height: 80px;
+          font-size: 1.8rem;
+          margin: 0.5rem 0;
+        }
+      }
+    </style>
+
+    <title>Mix or Match</title>
+  </head>
+
+  <body>
+    <h1>Mix or Match</h1>
+    <h2>Choose your favorite series</h2>
+    <div class="button-container">
+      <a href="index.html"><button class="b1">Friends</button></a>
+      <a href="index1.html"><button class="b2">The Office</button></a>
+      <a href="index2.html"><button class="b3">Modern Family</button></a>
+    </div>
+  </body>
+</html>
